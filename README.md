@@ -1,16 +1,89 @@
-# launcher
+<div align="center" id="top"> 
+  <!-- <img src="./.github/app.gif" alt="Launcher" /> -->
 
-A new Flutter project.
+  &#xa0;
 
-## Getting Started
+  <!-- <a href="https://launcher.netlify.app">Demo</a> -->
+</div>
 
-This project is a starting point for a Flutter application.
+<h1 align="center">Launcher</h1>
 
-A few resources to get you started if this is your first Flutter project:
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/ufrshubham/launcher?color=5cbe56">
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/ufrshubham/launcher?color=5cbe56">
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ufrshubham/launcher?color=5cbe56">
+
+  <img alt="License" src="https://img.shields.io/github/license/ufrshubham/launcher?color=5cbe56">
+
+  <img alt="Github issues" src="https://img.shields.io/github/issues/ufrshubham/launcher?color=5cbe56" />
+
+  <img alt="Github forks" src="https://img.shields.io/github/forks/ufrshubham/launcher?color=5cbe56" />
+
+  <img alt="Github stars" src="https://img.shields.io/github/stars/ufrshubham/launcher?color=5cbe56" />
+</p>
+
+<!-- Status -->
+
+<h4 align="center"> 
+	🚧  Launcher 🚀 Under construction...  🚧
+</h4> 
+
+<hr>
+
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="https://github.com/ufrshubham" target="_blank">Author</a>
+</p>
+
+<br>
+
+## :dart: About ##
+
+This repo is home to a simple android launcher app made using Flutter.
+
+## :sparkles: Features ##
+
+:heavy_check_mark: Nothing yet 😅
+
+## :rocket: Technologies ##
+
+The following tools were used in this project:
+
+- [Flutter](https://flutter.dev/)
+
+## :white_check_mark: Requirements ##
+
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Flutter](https://flutter.dev/) installed. Make sure that you are on stable channel of Flutter.
+
+## :checkered_flag: Starting ##
+
+```bash
+# Clone this project
+$ git clone https://github.com/ufrshubham/launcher
+
+# Access
+$ cd launcher
+
+# Build and run the project
+$ flutter run
+
+# Launcher will run on any connected android device or emulator.
+```
+
+## :memo: License ##
+
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
+
+
+Made with :brain: by <a href="https://github.com/ufrshubham" target="_blank">DevKage</a>
+
+&#xa0;
+
+<a href="#top">Back to top</a>
