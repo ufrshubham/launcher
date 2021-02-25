@@ -46,7 +46,7 @@
 
 ## :dart: About ##
 
-This repo is home to a simple android launcher app made using Flutter.
+This repo is home to a simple android launcher app made using Flutter. If you want to get involved in this project by fixing bugs or adding new features, feel free to first start a discussion using [Discussions](https://github.com/ufrshubham/launcher/discussions) tab or slide into our [Telegram group](https://t.me/joinchat/IC4Z016cWSleOZAr).
 
 ## :sparkles: Features ##
 
