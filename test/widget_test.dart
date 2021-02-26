@@ -8,14 +8,15 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:launcher/main.dart';
+import 'package:launcher/screens/home.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Launcher app test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(Launcher());
 
-    // Verify that Launcher greets us.
-    expect(find.text('Welcome to Launcher!'), findsOneWidget);
+    // Verify that Launcher is showing home.
+    expect(find.byType(Home), findsWidgets);
 
     // Tap the '+' icon and trigger a frame.
     // await tester.tap(find.byIcon(Icons.add));
