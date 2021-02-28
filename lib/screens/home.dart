@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      /// Make sure that Home will not get popped by system.
+      // Make sure that Home will not get popped by system.
       onWillPop: () async => false,
       child: Scaffold(
         body: Consumer<List<Application>>(

@@ -1,5 +1,6 @@
 import 'package:device_apps/device_apps.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
 
@@ -24,10 +25,28 @@ class App extends StatelessWidget {
         ),
       ),
       onTap: () async {
-        if (await DeviceApps.openApp(app.packageName)) {
-          logger.i('${app.appName} was opened');
-        } else {
-          logger.e('${app.appName} failed to open');
+        try {
+          if (await DeviceApps.openApp(app.packageName)) {
+            logger.i('${app.appName} was opened');
+          } else {
+            Scaffold.of(context).showSnackBar(
+              SnackBar(
+                content: Text(
+                    'Cannot open ${app.appName}. It might be a system app.'),
+              ),
+            );
+            logger.e('${app.appName} failed to open');
+          }
+        } on PlatformException catch (exception) {
+          Scaffold.of(context).showSnackBar(
+            SnackBar(
+              content:
+                  Text('Cannot open ${app.appName}. It might be a system app.'),
+            ),
+          );
+          logger.e(
+            '${app.appName} failed to open. Reason: ${exception.message}',
+          );
         }
       },
     );
