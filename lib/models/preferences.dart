@@ -29,6 +29,7 @@ class Preferences extends ChangeNotifier {
   set layoutType(LayoutType layoutType) {
     if (layoutType != null) {
       _layoutType = layoutType;
+      preferenceBox.put(_layoutTypePrefKey, _layoutType.index);
       notifyListeners();
     }
   }
