@@ -26,6 +26,8 @@ dependencies:
   device_apps: ^1.2.0 # Make sure to keep an eye on https://pub.dev/packages/device_apps for any changes to QUERY_ALL_PACKAGES permission.
   provider: ^4.3.3
   logger: ^0.9.4
+  hive: ^1.4.4+1
+  path_provider: ^1.6.27
 
 
   # The following adds the Cupertino Icons font to your application.
