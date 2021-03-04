@@ -8,7 +8,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:launcher/main.dart';
-import 'package:launcher/screens/home.dart';
+import 'package:launcher/screens/app_drawer.dart';
 
 void main() {
   testWidgets('Launcher app test', (WidgetTester tester) async {
@@ -16,7 +16,7 @@ void main() {
     await tester.pumpWidget(Launcher());
 
     // Verify that Launcher is showing home.
-    expect(find.byType(Home), findsWidgets);
+    expect(find.byType(AppDrawer), findsWidgets);
 
     // Tap the '+' icon and trigger a frame.
     // await tester.tap(find.byIcon(Icons.add));

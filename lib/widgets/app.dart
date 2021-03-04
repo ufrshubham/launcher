@@ -15,8 +15,13 @@ class App extends StatelessWidget {
     final logger = Provider.of<Logger>(context, listen: false);
     return InkResponse(
       child: GridTile(
-        child: Image.memory(
-          app.icon,
+        child: SizedBox(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Image.memory(
+              app.icon,
+            ),
+          ),
         ),
         footer: Text(
           app.appName,
@@ -29,7 +34,7 @@ class App extends StatelessWidget {
           if (await DeviceApps.openApp(app.packageName)) {
             logger.i('${app.appName} was opened');
           } else {
-            Scaffold.of(context).showSnackBar(
+            ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(
                     'Cannot open ${app.appName}. It might be a system app.'),
@@ -38,7 +43,7 @@ class App extends StatelessWidget {
             logger.e('${app.appName} failed to open');
           }
         } on PlatformException catch (exception) {
-          Scaffold.of(context).showSnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content:
                   Text('Cannot open ${app.appName}. It might be a system app.'),
