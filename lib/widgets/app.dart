@@ -1,13 +1,13 @@
-import 'package:device_apps/device_apps.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:launcher_helper/launcher_helper.dart';
 import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
 
 /// This widget will display the app icon and app name of the given [app].
 /// It will also launch the given [app] on tap.
 class App extends StatelessWidget {
-  final ApplicationWithIcon app;
+  final Application app;
   const App({Key key, this.app}) : super(key: key);
 
   @override
@@ -18,39 +18,37 @@ class App extends StatelessWidget {
         child: SizedBox(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Image.memory(
-              app.icon,
-            ),
+            child: app.icon,
           ),
         ),
         footer: Text(
-          app.appName,
+          app.label,
           textAlign: TextAlign.center,
           overflow: TextOverflow.ellipsis,
         ),
       ),
       onTap: () async {
         try {
-          if (await DeviceApps.openApp(app.packageName)) {
-            logger.i('${app.appName} was opened');
+          if (await LauncherHelper.launchApp(app.packageName)) {
+            logger.i('${app.label} was opened');
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text(
-                    'Cannot open ${app.appName}. It might be a system app.'),
+                content:
+                    Text('Cannot open ${app.label}. It might be a system app.'),
               ),
             );
-            logger.e('${app.appName} failed to open');
+            logger.e('${app.label} failed to open');
           }
         } on PlatformException catch (exception) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content:
-                  Text('Cannot open ${app.appName}. It might be a system app.'),
+                  Text('Cannot open ${app.label}. It might be a system app.'),
             ),
           );
           logger.e(
-            '${app.appName} failed to open. Reason: ${exception.message}',
+            '${app.label} failed to open. Reason: ${exception.message}',
           );
         }
       },

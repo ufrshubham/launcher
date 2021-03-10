@@ -23,7 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  device_apps: ^1.2.0 # Make sure to keep an eye on https://pub.dev/packages/device_apps for any changes to QUERY_ALL_PACKAGES permission.
+  permission_handler: ^5.1.0+2
+  launcher_helper: ^0.4.6+hotfix.1
   provider: ^4.3.3
   logger: ^0.9.4
   hive: ^1.4.4+1
